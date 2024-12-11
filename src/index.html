@@ -4,12 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stalemate&family=Vollkorn:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>Example title</h1>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <include src="./partials/header.html"></include>
+
+    <main>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/advantages.html"></include>
+      <include src="./partials/gallery.html"></include>
+      <include src="./partials/delivery.html"></include>
+      <include src="./partials/reviews.html"></include>
+      <include src="./partials/quick_order.html"></include>
+    </main>
+
+    <footer>
+      <include src="./partials/footer.html"></include>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
