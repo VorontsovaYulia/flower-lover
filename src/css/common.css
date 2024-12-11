@@ -76,17 +76,16 @@ button {
 }
 
 :root {
-    --white: #FCFAFA;
-    --black: #1D0202;
-    --dark-green: #052C06;
-    --green: #71836D;
-    --light-green: #E3DEC8;
+    --light-text-color: #FCFAFA;
+    --dark-text-color: #1D0202;
+    --primary-color: #71836D;
+    --secondary-color: #E3DEC8;
 
     --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--light-text-color);
     font-family: 'Vollkorn', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -96,25 +95,25 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
+  
 }
 
 @media screen and (min-width: 360px) {
     .container {
-        width: 360px;
+        min-width: 360px;
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1440px;
+        padding: 0px 26px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .container {
-        width: 1440px;
-    }
+            padding: 0px 72px;
+        }
 }
-
-/* @media screen and (min-width: 360px) {
-    .container-mobile {
-        max-width: 200px;
-        min-height: 100vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
