@@ -60,6 +60,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .advantages-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
     .advantages-title {
         font-size: 32px;
     }
@@ -80,6 +85,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+
+.advantages-container {
+    padding-top: 104px;
+    padding-bottom: 104px;
+}
 
     .advantages-list {
         gap: 34px;
