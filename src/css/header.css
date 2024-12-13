@@ -1,0 +1,60 @@
+.header {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width:1024px) {
+    .header {
+        height: 80px;
+    }
+}
+
+.header-title {
+    font-family: 'Stalemate', sans-serif;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.36;
+    color: var(--dark-text-color);
+    display: inline-block;
+    height: 38px;
+}
+
+@media screen and (min-width:1024px) {
+    .header-title {
+        font-size: 58px;
+        line-height: 1.38;
+        height: 52px;
+    }
+}
+
+.header-title span {
+    color: var(--primary-color);
+    display: inline-block;
+    height: inherit;
+}
+
+
+.burger-btn {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width:1024px) {
+    .burger-btn {
+        display: none;
+    }
+}
+
+.menu-list {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .menu-list {
+        display: flex;
+        column-gap: 56px;
+        color: var(--dark-text-color);
+    }
+}
