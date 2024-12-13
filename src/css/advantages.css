@@ -13,12 +13,11 @@
 
 .advantages-list {
     display: grid;
-    gap: 16px 0px;
-    grid-template-columns:  repeat(auto-fit, minmax(312px, 374px));
-    grid-template-rows: repeat(auto-fit, minmax(414px, 420px));
+    gap: 16px 34px;
+    margin-top: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 350px));
     justify-content: center;
     align-items: center;
-    align-content: center;
 }
 
 .advantages-item {
@@ -54,35 +53,37 @@
 
 }
 
-@media screen and (min-width: 1024px) {
-    .advantages-title {
-        font-size: 28px;
-    }
-    
-    .advantages-subtitle {
-        font-size: 17px;
-    }
-
-    /* .advantages-list {
-       gap: 24px 0px; 
-    } */
-
-    .advantages-holder {
-        width: 350px;
+@media screen and (min-width: 768px) {
+    .advantages-list {
+        gap: 34px 0px;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
     .advantages-title {
         font-size: 32px;
     }
-
+    
     .advantages-subtitle {
         font-size: 19px;
     }
 
     .advantages-list {
+        grid-template-columns: repeat(auto-fit, minmax(328px, 374px));
+        gap: 34px 10px;
+        margin-top: 50px;
+    }
+
+    .advantages-holder {
+        width: 360px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .advantages-list {
         gap: 34px;
+        margin-top: 80px;
     }
 
     .advantages-holder {
