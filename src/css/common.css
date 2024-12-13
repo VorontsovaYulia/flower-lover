@@ -75,6 +75,13 @@ button {
     cursor: pointer;
 }
 
+hr {
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 100%;
+}
+
 :root {
     --light-text-color: #FCFAFA;
     --dark-text-color: #1D0202;
