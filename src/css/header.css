@@ -1,4 +1,4 @@
-.header {
+.header-container {
     height: 72px;
     display: flex;
     justify-content: space-between;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (min-width:1024px) {
-    .header {
+    .header-container {
         height: 80px;
     }
 }
@@ -37,8 +37,9 @@
 
 
 .burger-btn {
-    width: 40px;
-    height: 40px;
+    border: transparent;
+    background-color: transparent;
+    color: transparent;
 }
 
 @media screen and (min-width:1024px) {
@@ -46,6 +47,21 @@
         display: none;
     }
 }
+
+.icon-menu {
+    stroke: var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: var(--transition-dur-and-func);
+}
+
+.burger-btn:active .icon-menu {
+    stroke: var(--primary-color);
+}
+
 
 .menu-list {
     display: none;
@@ -56,5 +72,20 @@
         display: flex;
         column-gap: 56px;
         color: var(--dark-text-color);
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 22px;
     }
+}
+
+.menu-link {
+    transition: var(--transition-dur-and-func);
+}
+
+.menu-link:is(:hover, :focus) {
+    color: var(--first-text-hover);
+}
+
+.menu-link:active {
+    color: var(--primary-color);
 }
