@@ -1,5 +1,5 @@
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/hero-bg-mob-1x.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/hero-bg-mob-1x.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .hero-section {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/hero-bg-mob-2x.jpeg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/hero-bg-mob-2x.webp);
     }
 }
 
@@ -21,13 +21,13 @@
 (min-resolution: 288dpi),
 (min-resolution: 3dppx) {
     .hero-section {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/hero-bg-mob-3x.jpeg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/hero-bg-mob-3x.webp);
     }
 }
 
 @media screen and (min-width:520px) {
     .hero-section {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-bg-1x.jpeg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-bg-1x.webp);
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -36,7 +36,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-bg-2x.jpeg);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-bg-2x.webp);
         }
     }
 
@@ -46,7 +46,7 @@
     (min-resolution: 288dpi),
     (min-resolution: 3dppx) {
         .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-bg-3x.jpeg);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/hero-bg-3x.webp);
         }
     }
 }
