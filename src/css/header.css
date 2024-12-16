@@ -92,3 +92,14 @@
 .menu-link:active {
     color: var(--primary-color);
 }
+
+
+/*  */
+.order-now-modal-close__img {
+    stroke: #050505;
+    transition: stroke var(--transition-dur-and-func);
+}
+
+.order-now-modal-close__img:hover {
+    stroke: var(--green-btn);
+}
