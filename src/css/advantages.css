@@ -51,7 +51,22 @@
     background-color: var(--primary-color);
 }
 
+/* .gallery-select {
+    border: none;
+
+    background-color: var(--light-text-color);
+    appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
 }
+.gallery-select:focus {
+            outline: none;
+            box-shadow: none;
+            border: solid 1px var(--primary-color);
+        } */
+}
+
+
 
 @media screen and (min-width: 768px) {
     .advantages-list {
