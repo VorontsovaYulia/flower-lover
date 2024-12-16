@@ -84,9 +84,9 @@ body.show-modal-order-now .order-now-backdrop {
     flex-direction: column;
     row-gap: 30px;
     color: var(--dark-text-color);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
-    line-height: 22px;
+    line-height: 1.1;
 }
 
 .mobile-menu-link {
