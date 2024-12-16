@@ -14,8 +14,9 @@
           name="user_name"
           class="order-form-input order-form-field"
           required
-          pattern="[А-ЩЬЮЯҐЄІЇа-щьюяґєії]"
+          pattern="[а-щьюяґєіїА-ЩЬЮЯҐЄІЇ']*$"
           minlength="2"
+          maxlength="20"
           placeholder="Ім'я"
         />
       </label>
@@ -25,8 +26,10 @@
           name="user_phone"
           class="order-form-input order-form-field"
           required
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-          title="xxx-xxx-xx-xx"
+          pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
+          title="XXX5882076"
+          minlength="10"
+          maxlength="10"
           placeholder="Номер телефону"
         />
       </label>
@@ -36,6 +39,7 @@
           name="number_of_bouquets"
           class="order-form-input order-form-field"
           required
+          min="1"
           placeholder="Кількість букетів"
         />
       </label>
@@ -45,21 +49,19 @@
           name="cost"
           class="order-form-input order-form-field"
           required
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-          title="xxx-xxx-xx-xx"
           placeholder="Орієнтовна вартість"
         />
       </label>
       <div class="custom-select js-select-container">
         <!-- <label class="order-form-group"> -->
-          <select name="reason_for_purchase" class="js-select-item">
-            <option value="" disabled selected>Привід покупки</option>
-            <option value="birthday">День Народження</option>
-            <option value="wedding">Весілля</option>
-            <option value="business meeting">Ділова зустріч</option>
-            <option value="mourning">Траур</option>
-            <option value="other">Свій варіант</option>
-          </select>
+        <select name="reason_for_purchase" class="js-select-item">
+          <option value="" disabled selected>Привід покупки</option>
+          <option value="birthday">День Народження</option>
+          <option value="wedding">Весілля</option>
+          <option value="business meeting">Ділова зустріч</option>
+          <option value="mourning">Траур</option>
+          <option value="other">Свій варіант</option>
+        </select>
         <!-- </label> -->
       </div>
       <label class="order-form-group hiddenvisualy">
