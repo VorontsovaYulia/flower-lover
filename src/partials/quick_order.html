@@ -14,7 +14,7 @@
           name="user_name"
           class="order-form-input order-form-field"
           required
-          pattern="[a-zA-Z]+"
+          pattern="[А-ЩЬЮЯҐЄІЇа-щьюяґєії]"
           minlength="2"
           placeholder="Ім'я"
         />
@@ -50,43 +50,24 @@
           placeholder="Орієнтовна вартість"
         />
       </label>
-      <label class="order-form-group">
-        <select
-          name="reason_for_purchase"
-          class="order-form-select order-form-field"
-        >
-          <option
-            class="order-form-select-placeholder"
-            value=""
-            disabled
-            selected
-          >
-            Привід покупки
-          </option>
-          <option class="order-form-select-option" value="birthday">
-            День Народження
-          </option>
-          <option class="order-form-select-option" value="wedding">
-            Весілля
-          </option>
-          <option class="order-form-select-option" value="business meeting">
-            Ділова зустріч
-          </option>
-          <option class="order-form-select-option" value="mourning">
-            Траур
-          </option>
-          <option class="order-form-select-option" value="other">
-            Свій варіант
-          </option>
-        </select>
-      </label>
-      <label class="order-form-group">
+      <div class="custom-select js-select-container">
+        <!-- <label class="order-form-group"> -->
+          <select name="reason_for_purchase" class="js-select-item">
+            <option value="" disabled selected>Привід покупки</option>
+            <option value="birthday">День Народження</option>
+            <option value="wedding">Весілля</option>
+            <option value="business meeting">Ділова зустріч</option>
+            <option value="mourning">Траур</option>
+            <option value="other">Свій варіант</option>
+          </select>
+        <!-- </label> -->
+      </div>
+      <label class="order-form-group hiddenvisualy">
         <input
           type="text"
           name="reason_for_purchase-input"
           class="order-form-input order-form-field"
           placeholder="Введіть свій варіант"
-          hidden
         />
       </label>
       <label class="order-form-group">
@@ -94,7 +75,6 @@
           name="user_message"
           class="order-form-message order-form-field"
           placeholder="Коментар"
-          F
         ></textarea>
       </label>
       <button type="submit" class="order-form-btn btn">Замовити букет</button>

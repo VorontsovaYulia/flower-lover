@@ -60,7 +60,6 @@
   width: 100%;
   height: 40px;
   padding: 8px 16px;
-  transition: border-color var(--transition-dur-and-func);
 }
 
 .order-form-input::placeholder {
@@ -68,7 +67,8 @@
 }
 
 .order-form-input:focus {
-
+  outline: none;
+  border: 2px solid var(--primary-color);
 }
 
 .order-form-message {
@@ -76,27 +76,110 @@
   height: 40px;
   padding: 8px 16px;
   resize: none;
-  /* transition:  */
 }
 .order-form-message::placeholder {
   color: rgba(0, 0, 0, 0.75);
 }
 .order-form-message:focus {
-
+  outline: none;
+  border: 2px solid var(--primary-color);
 }
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  height: 40px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.75);
+  border: 0;
+  background-color: var(--light-text-color);
+}
+
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: '';
+  top: 20px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--primary-color) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent  var(--primary-color) transparent;
+  top: 10px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  font-size: 18px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: var(--light-text-color);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  color: rgba(0, 0, 0, 0.75);
+  background-color: var(--second-btn-hover);
+}
+
+/* .order-form-group:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+} */
 
 .order-form-btn {
   min-width: 328px;
   background-color: var(--secondary-color);
   color: var(--dark-text-color);
   border: transparent;
-  border-radius: 26px;
   padding: 12px 78px;
   margin-left: auto;
   margin-right: auto;
-  /* transition:; */
+  transition: background-color var(--transition-dur-and-func);
 }
-.order-form-btn:hover,
-.order-form-btn:focus {
 
+.order-form-btn:hover {
+  background-color: var(--second-btn-hover);
+}
+
+.order-form-btn:focus {
+  background-color: var(--primary-color);
 }
