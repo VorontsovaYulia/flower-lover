@@ -88,15 +88,16 @@ input[type='number'] {
   height: 40px;
   padding: 8px 16px;
   resize: vertical;
+}
 
-  &::-webkit-scrollbar {
-    width: 2px;
-  }
-  &::-webkit-scrollbar-thumb {
-    cursor: grab;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-  }
+.order-form-message::-webkit-scrollbar {
+  width: 2px;
+}
+
+.order-form-message::-webkit-scrollbar-thumb {
+  cursor: grab;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .order-form-message::placeholder {
