@@ -62,7 +62,7 @@
 }
 
 .burger-close:active .icon-x {
-    color: var(--light-text-color);
+    stroke: var(--light-text-color);
 }
 
 body.show-modal-order-now .order-now-backdrop {
@@ -72,7 +72,7 @@ body.show-modal-order-now .order-now-backdrop {
 }
 
 .icon-x {
-    color: var(--dark-text-color);
+    stroke: var(--dark-text-color);
     display: flex;
     justify-content: center;
     align-items: center;
