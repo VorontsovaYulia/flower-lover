@@ -96,7 +96,9 @@
 
 /*  */
 .order-now-modal-close {
-    stroke: #050505;
+    width: 32px;
+    height: 32px;
+    stroke: black;
     transition: stroke var(--transition-dur-and-func);
 }
 
