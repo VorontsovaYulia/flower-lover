@@ -52,7 +52,7 @@
 }
 
 .icon-menu {
-    fill: var(--third-color);
+    stroke: var(--third-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .burger-btn:active .icon-menu {
-    fill: var(--primary-color);
+    stroke: var(--primary-color);
 }
 
 
