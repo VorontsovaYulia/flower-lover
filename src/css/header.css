@@ -52,7 +52,7 @@
 }
 
 .icon-menu {
-    stroke: var(--third-color);
+    fill: var(--third-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .burger-btn:active .icon-menu {
-    stroke: var(--primary-color);
+    fill: var(--primary-color);
 }
 
 
@@ -95,7 +95,7 @@
 
 
 /*  */
-.order-now-modal-close {
+/* .order-now-modal-close {
     width: 32px;
     height: 32px;
     stroke: black;
@@ -104,4 +104,4 @@
 
 .order-now-modal-close:hover {
     stroke: red;
-}
+} */
