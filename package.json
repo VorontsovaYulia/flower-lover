@@ -22,8 +22,9 @@
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
+    "@parcel/optimizer-svgo": "^2.13.3",
     "@parcel/transformer-sass": "^2.6.0",
-    "parcel": "^2.13.2",
+    "parcel": "^2.13.3",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4",
     "svgo": "^3.3.2"
