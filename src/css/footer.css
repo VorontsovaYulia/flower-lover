@@ -46,23 +46,20 @@
 }
 .footer-social-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  justify-content: start;
+  gap: 24px;
 }
 .footer-social-item {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
 }
 .footer-social-link {
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  color: #f4f4fd;
-  transition: background-color var(--transition-dur-and-func);
+  color: var(--light-text-color);
+  transition: color var(--transition-dur-and-func);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: #31d0aa;
+  color: var(--first-text-hover);;
 }
 .footer-social-icon {
   fill: currentColor;
