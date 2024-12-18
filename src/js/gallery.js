@@ -3,7 +3,7 @@ import { flowers, categories } from '../helpers/flowers';
 const container = document.querySelector('.js-gallery');
 const select = document.querySelector('.js-select');
 
-select.addEventListener('change', onCategoryOptions);
+select?.addEventListener('change', onCategoryOptions);
 
 const swiper = new Swiper('.swiper', {
   navigation: {
@@ -58,7 +58,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 categories.map(category => {
-  select.insertAdjacentHTML(
+  select?.insertAdjacentHTML(
     'beforeend',
     `<option value="${category}">${category}</option>`
   );
@@ -94,7 +94,9 @@ function create(value) {
 </li>`
     )
     .join('');
-  container.innerHTML = markup;
-  swiper.update();
-  swiper.slideTo(0);
+  if (select) {
+    container.innerHTML = markup;
+    swiper.update();
+    swiper.slideTo(0);
+  }
 }
