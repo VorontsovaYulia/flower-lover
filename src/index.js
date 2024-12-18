@@ -1,4 +1,3 @@
-import './js/hero';
 import './js/advantages';
 import './js/gallery';
 import './js/delivery';
