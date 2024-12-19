@@ -1,9 +1,10 @@
+import SlimSelect from 'slim-select';
 import { flowers, categories } from '../helpers/flowers';
 
 const container = document.querySelector('.js-gallery');
-const select = document.querySelector('.js-select');
+const selectEL = document.querySelector('.js-select');
 
-select?.addEventListener('change', onCategoryOptions);
+selectEL?.addEventListener('change', onCategoryOptions);
 
 const swiper = new Swiper('.swiper', {
   navigation: {
@@ -58,10 +59,18 @@ const swiper = new Swiper('.swiper', {
 });
 
 categories.map(category => {
-  select?.insertAdjacentHTML(
+  selectEL?.insertAdjacentHTML(
     'beforeend',
     `<option value="${category}">${category}</option>`
   );
+});
+
+new SlimSelect({
+  select: '.js-select',
+  settings: {
+    showSearch: false,
+    openPosition: 'down',
+  },
 });
 
 create('Бестселлери');
@@ -94,7 +103,8 @@ function create(value) {
 </li>`
     )
     .join('');
-  if (select) {
+
+  if (selectEL) {
     container.innerHTML = markup;
     swiper.update();
     swiper.slideTo(0);
