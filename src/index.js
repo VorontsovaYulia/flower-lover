@@ -1,4 +1,3 @@
-import './js/advantages';
 import './js/gallery';
 import './js/delivery';
 import './js/reviews';

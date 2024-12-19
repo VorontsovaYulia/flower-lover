@@ -2,7 +2,7 @@ import SlimSelect from 'slim-select';
 import { flowers, categories } from '../helpers/flowers';
 
 const container = document.querySelector('.js-gallery');
-const selectEL = document.querySelector('.js-select');
+const selectEL = document.querySelector('.js-gallery-select');
 
 selectEL?.addEventListener('change', onCategoryOptions);
 
@@ -66,7 +66,7 @@ categories.map(category => {
 });
 
 new SlimSelect({
-  select: '.js-select',
+  select: '.js-gallery-select',
   settings: {
     showSearch: false,
     openPosition: 'down',
