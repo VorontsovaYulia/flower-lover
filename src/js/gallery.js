@@ -30,7 +30,7 @@ const swiper = new Swiper('.swiper', {
     360: {
       slidesPerView: 1,
       grid: {
-        rows: 4,
+        rows: 2,
       },
       spaceBetween: 5,
     },
