@@ -2,6 +2,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 24px;
   padding-top: 24px;
   padding-bottom: 48px;
   background-image: url('../images/order-bg-mob.webp');
@@ -199,7 +200,7 @@ input[type='number'] {
 
 @media screen and (min-width: 1200px) {
   .quick-order-section {
-    max-width: 1440px;
+    margin-bottom: 80px;
     padding-bottom: 164px;
     background-image: url('../images/order-bg-desk.webp');
   }
@@ -251,7 +252,7 @@ input[type='number'] {
   }
 
   .order-form-btn {
-  min-width: 320px;
-   padding: 12px 74px;
-}
+    min-width: 320px;
+    padding: 12px 74px;
+  }
 }
