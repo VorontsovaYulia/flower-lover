@@ -123,7 +123,7 @@
 }
 
 .hero-btn {
-    padding: 12px 16px;
+    display: inline-block;
     border-radius: 26px;
     border: transparent;
     background-color: var(--light-text-color);
@@ -132,15 +132,16 @@
     font-weight: 600;
     line-height: 1.38;
     margin-top: 90px;
+    padding: 12px 16px;
     transition: var(--transition-dur-and-func);
 }
 
 @media screen and (min-width:520px) {
     .hero-btn {
-        padding: 12px 68px;
         font-size: 20px;
         line-height: 1.1;
         margin-top: 48px;
+        padding: 12px 68px;
     }
 }
 
