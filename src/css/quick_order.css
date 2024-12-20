@@ -200,7 +200,6 @@ input[type='number'] {
 
 @media screen and (min-width: 1200px) {
   .quick-order-section {
-    max-width: 1440px;
     margin-bottom: 80px;
     padding-bottom: 164px;
     background-image: url('../images/order-bg-desk.webp');
