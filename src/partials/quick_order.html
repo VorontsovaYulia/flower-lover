@@ -1,7 +1,7 @@
 <section id="quick-order" class="quick-order-section">
   <div class="container">
     <h2 class="order-title">Швидке замовлення</h2>
-  <hr>
+    <hr />
     <p class="order-desc">
       Заповніть форму і ми одразу зв’яжемось з Вами для уточнення замовлення
     </p>
@@ -41,7 +41,7 @@
           placeholder="Кількість букетів"
         />
       </label>
-      <label class="modal-form-group">
+      <label class="order-form-group">
         <input
           type="number"
           name="cost"
@@ -51,22 +51,22 @@
         />
       </label>
       <div class="custom-select js-select-container">
-        <!-- <label class="order-form-group"> -->
-        <select name="reason_for_purchase" class="js-select-item">
-          <option value="" disabled selected>Привід покупки</option>
-          <option value="birthday">День Народження</option>
-          <option value="wedding">Весілля</option>
-          <option value="business meeting">Ділова зустріч</option>
-          <option value="mourning">Траур</option>
-          <option value="other">Свій варіант</option>
-        </select>
-        <!-- </label> -->
+        <label class="order-form-group">
+          <select name="reason_for_purchase" class="js-select-item">
+            <option value="" disabled selected>Привід покупки</option>
+            <option value="birthday">День Народження</option>
+            <option value="wedding">Весілля</option>
+            <option value="business meeting">Ділова зустріч</option>
+            <option value="mourning">Траур</option>
+            <option value="other">Свій варіант</option>
+          </select>
+        </label>
       </div>
-      <label class="order-form-group hiddenvisualy">
+      <label class="order-form-group hiddenvisualy js-own-version" >
         <input
           type="text"
-          name="reason_for_purchase-input"
-          class="order-form-input order-form-field"
+          name="reason_own_version"
+          class="order-form-input order-form-field "
           placeholder="Введіть свій варіант"
         />
       </label>

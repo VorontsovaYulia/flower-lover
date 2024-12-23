@@ -1,65 +1,50 @@
+import { setCustomSelect } from '../helpers/quick_order_select';
+
+const orderFormEl = document.querySelector('.order-form');
 const selectContainerEl = document.querySelector('.js-select-container');
 const selectItemEl = document.querySelector('.js-select-item');
 
-const numberOfOptions = selectItemEl.length;
+setCustomSelect(selectContainerEl, selectItemEl);
 
-const divForSelectSelectedEl = document.createElement('DIV');
-divForSelectSelectedEl.classList.add('select-selected');
-divForSelectSelectedEl.innerHTML =
-  selectItemEl.options[selectItemEl.selectedIndex].innerHTML;
-selectContainerEl.appendChild(divForSelectSelectedEl);
+const selectSelectedEl = document.querySelector('.select-selected');
+const labelOwnVersionEl = selectContainerEl.nextElementSibling;
+const optionOwnVersionEl = selectContainerEl.lastElementChild;
 
-const divForSelectItemsEl = document.createElement('DIV');
-divForSelectItemsEl.classList.add('select-items', 'select-hide');
-
-for (let j = 1; j < numberOfOptions; j++) {
-  const divOptionEl = document.createElement('DIV');
-  divOptionEl.innerHTML = selectItemEl.options[j].innerHTML;
-  divOptionEl.addEventListener('click', onClickDivOptionEl);
-  divForSelectItemsEl.appendChild(divOptionEl);
-}
-selectContainerEl.appendChild(divForSelectItemsEl);
-
-selectContainerEl.addEventListener('click', onClickCloseAllSelect);
-
-function onClickDivOptionEl(event) {
-  for (let i = 0; i < numberOfOptions; i++) {
-    if (selectItemEl.options[i].innerHTML === this.innerHTML) {
-      selectItemEl.selectedIndex = i;
-      divForSelectSelectedEl.innerHTML = this.innerHTML;
-      const sameAsSelectedEl = document.querySelectorAll('.same-as-selected');
-      const sameAsSelectedElLenght = sameAsSelectedEl.length;
-
-      for (let k = 0; k < sameAsSelectedElLenght; k++) {
-        sameAsSelectedEl[k].classList.remove('same-as-selected');
-      }
-      this.classList.add('same-as-selected');
-      break;
-    }
+optionOwnVersionEl.addEventListener('click', () => {
+  if (selectSelectedEl.dataset.id) {
+    labelOwnVersionEl.classList.remove('hiddenvisualy');
   }
-}
-
-function onClickCloseAllSelect(event) {
-  event.stopPropagation();
-  closeAllSelect(divForSelectSelectedEl);
-  divForSelectItemsEl.classList.toggle('select-hide');
-  divForSelectSelectedEl.classList.toggle('select-arrow-active');
-}
-
-function closeAllSelect(element) {
-  const arr = [];
-  const divForSelectItemsElLenght = divForSelectItemsEl.length;
-  const divForSelectSelectedElLenght = divForSelectSelectedEl.length;
-  for (let i = 0; i < divForSelectSelectedElLenght; i++) {
-    if (element === divForSelectSelectedEl[i]) {
-      arr.push(i);
-    } else {
-      divForSelectSelectedEl[i].classList.remove('select-arrow-active');
-    }
+  if (!selectSelectedEl.dataset.id) {
+    labelOwnVersionEl.classList.add('hiddenvisualy');
   }
-  for (let i = 0; i < divForSelectItemsElLenght; i++) {
-    if (arr.indexOf(i)) {
-      divForSelectItemsEl[i].classList.add('select-hide');
-    }
-  }
+});
+
+orderFormEl.addEventListener('submit', onSubmit);
+
+function onSubmit(evt) {
+  evt.preventDefault();
+
+  const {
+    user_name,
+    user_phone,
+    number_of_bouquets,
+    cost,
+    reason_own_version,
+    user_message,
+  } = evt.currentTarget.elements;
+
+  const data = {
+    userName: user_name.value,
+    userPhone: user_phone.value,
+    numberOfBouquets: number_of_bouquets.value,
+    cost: cost.value,
+    reasonForPurchase: selectSelectedEl.textContent,
+    reasonOwnVersion: reason_own_version.value,
+    message: user_message.value,
+  };
+
+  console.log(data);
+  orderFormEl.reset();
+  selectSelectedEl.textContent = 'Привід покупки';
+  labelOwnVersionEl.classList.add('hiddenvisualy');
 }
