@@ -19,6 +19,7 @@ function setCustomSelect(selectContainerEl, selectItemEl) {
     );
     divForSelectItemsEl.appendChild(divOptionEl);
   }
+  divForSelectItemsEl.lastChild.dataset.id = 'ownVersion';
 
   selectContainerEl.appendChild(divForSelectItemsEl);
 
@@ -36,6 +37,12 @@ function onClickDivOptionEl(evt, divForSelectSelectedEl) {
   const sameAsSelectedEl = document.querySelector('.same-as-selected');
   if (sameAsSelectedEl) {
     sameAsSelectedEl.classList.remove('same-as-selected');
+  }
+  if (evt.target.dataset.id) {
+    divForSelectSelectedEl.dataset.id = evt.target.dataset.id;
+  }
+  if (!evt.target.dataset.id) {
+    divForSelectSelectedEl.removeAttribute('data-id');
   }
   evt.target.classList.add('same-as-selected');
 }
