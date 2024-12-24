@@ -1,0 +1,8 @@
+.reviews-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.reviews-list {
+    display: grid;
+}
