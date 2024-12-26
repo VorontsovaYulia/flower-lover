@@ -1,4 +1,6 @@
 import { setCustomSelect } from '../helpers/quick_order_select';
+import { closePopupBtnEl, openPopup, closePopup } from "../js/pop_up_for_order"; 
+
 
 const orderFormEl = document.querySelector('.order-form');
 const selectContainerEl = document.querySelector('.js-select-container');
@@ -47,4 +49,7 @@ function onSubmit(evt) {
   orderFormEl.reset();
   selectSelectedEl.textContent = 'Привід покупки';
   labelOwnVersionEl.classList.add('hiddenvisualy');
+
+  openPopup();
+  closePopupBtnEl.addEventListener('click', closePopup);
 }
