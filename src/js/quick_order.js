@@ -1,5 +1,6 @@
 import { setCustomSelect } from '../helpers/quick_order_select';
 import { closePopupBtnEl, openPopup, closePopup } from '../js/pop_up_for_order';
+import {addQuickOrder} from '../api'
 
 const orderFormEl = document.querySelector('.order-form');
 const selectContainerEl = document.querySelector('.js-select-container');
@@ -11,11 +12,6 @@ const selectSelectedEl = document.querySelector('.select-selected');
 const labelOwnVersionEl = selectContainerEl.nextElementSibling;
 const optionOwnVersionEl = selectContainerEl.lastElementChild;
 
-const popupDescriptionSuccess =
-  '<p class="popup-desc">Дякуємо за замовлення.</p><p class="popup-desc">Очікуйте на дзвінок від менеджера.</p>';
-
-const popupDescriptionError =
-  '<p class="popup-desc">На жаль, сталася помилка.</p><p class="popup-desc">Спробуйте ще раз.</p>';
 
 optionOwnVersionEl.addEventListener('click', () => {
   if (selectSelectedEl.dataset.id) {
@@ -51,36 +47,11 @@ function onSubmit(evt) {
     message: user_message.value,
   };
 
-  console.log(data);
   orderFormEl.reset();
   selectSelectedEl.textContent = 'Привід покупки';
   const sameAsSelectedEl = document.querySelector('.same-as-selected');
   sameAsSelectedEl.classList.remove('same-as-selected');
   labelOwnVersionEl.classList.add('hiddenvisualy');
-  console.log('first', addQuickOrder(data));
+  console.log('first', addQuickOrder(data, openPopup));
   closePopupBtnEl.addEventListener('click', closePopup);
-}
-
-async function addQuickOrder(data) {
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  };
-  try {
-    const resp = await fetch(
-      'https://676ca9ac0e299dd2ddfd3e48.mockapi.io/order/quick-order',
-      options
-    );
-    if (!resp.ok) {
-      throw new Error(resp.statusText);
-    }
-    openPopup(popupDescriptionSuccess);
-    const data = await resp.json();
-    console.log(data);
-  } catch (_) {
-    openPopup(popupDescriptionError);
-  }
 }
