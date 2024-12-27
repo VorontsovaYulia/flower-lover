@@ -18,6 +18,7 @@
   line-height: 1.4;
   text-align: left;
   display: grid;
+  justify-content: space-evenly;
   grid-template-columns: 138px 187px;
   grid-template-rows: 140px 80px;
   row-gap: 40px;
@@ -36,7 +37,7 @@
   gap: 10px;
 }
 
-.footer-nav-link{
+.footer-nav-link {
   color: var(--light-text-color);
   transition: color var(--transition-dur-and-func);
 }
@@ -48,7 +49,6 @@
 }
 
 .footer-social {
-  margin-left: 40px;
   grid-column: 2;
   grid-row: 1;
   width: 130px;
@@ -122,22 +122,43 @@
   color: var(--dark-text-color);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 479px) {
+  .footer-social {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .footer-logo {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .page-footer {
     padding-bottom: 32px;
   }
 
   .footer-wrapper {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .footer-info {
-    font-size: 19px;
-    line-height: 1.15;
-    grid-template-columns: 188px 133px 174px 253px;
+    font-size: 14px;
+    grid-template-columns: auto;
     grid-template-rows: auto;
-    column-gap: 36px;
+    column-gap: 20px;
   }
 
   .footer-nav-wrapper {
@@ -153,7 +174,6 @@
   }
 
   .footer-social {
-    margin-left: 0px;
     grid-column: 3;
     grid-row: 1;
     width: 174px;
@@ -180,8 +200,28 @@
   }
 
   .footer-logo {
-    display: flex;
     align-items: end;
+    font-size: 40px;
+  }
+  .footer-logo-link {
+    display: inline-block;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer-wrapper {
+    justify-content: space-between;
+  }
+
+  .footer-info {
+    font-size: 19px;
+    line-height: 1.15;
+    grid-template-columns: 188px 133px 174px 253px;
+    column-gap: 36px;
+  }
+
+  .footer-logo {
     font-size: 58px;
     line-height: 1.4;
   }

@@ -1,4 +1,6 @@
 import { setCustomSelect } from '../helpers/quick_order_select';
+import { closePopupBtnEl, openPopup, closePopup } from '../js/pop_up_for_order';
+import {addQuickOrder} from '../api'
 
 const orderFormEl = document.querySelector('.order-form');
 const selectContainerEl = document.querySelector('.js-select-container');
@@ -9,6 +11,7 @@ setCustomSelect(selectContainerEl, selectItemEl);
 const selectSelectedEl = document.querySelector('.select-selected');
 const labelOwnVersionEl = selectContainerEl.nextElementSibling;
 const optionOwnVersionEl = selectContainerEl.lastElementChild;
+
 
 optionOwnVersionEl.addEventListener('click', () => {
   if (selectSelectedEl.dataset.id) {
@@ -33,18 +36,22 @@ function onSubmit(evt) {
     user_message,
   } = evt.currentTarget.elements;
 
+
   const data = {
     userName: user_name.value,
     userPhone: user_phone.value,
     numberOfBouquets: number_of_bouquets.value,
     cost: cost.value,
     reasonForPurchase: selectSelectedEl.textContent,
-    reasonOwnVersion: reason_own_version.value,
+    reasonOwnVersion: (selectSelectedEl.dataset.id) ? reason_own_version.value : '',
     message: user_message.value,
   };
 
-  console.log(data);
   orderFormEl.reset();
   selectSelectedEl.textContent = 'Привід покупки';
+  const sameAsSelectedEl = document.querySelector('.same-as-selected');
+  sameAsSelectedEl.classList.remove('same-as-selected');
   labelOwnVersionEl.classList.add('hiddenvisualy');
+  addQuickOrder(data, openPopup);
+  closePopupBtnEl.addEventListener('click', closePopup);
 }
