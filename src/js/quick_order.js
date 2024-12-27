@@ -52,6 +52,6 @@ function onSubmit(evt) {
   const sameAsSelectedEl = document.querySelector('.same-as-selected');
   sameAsSelectedEl.classList.remove('same-as-selected');
   labelOwnVersionEl.classList.add('hiddenvisualy');
-  console.log('first', addQuickOrder(data, openPopup));
+  addQuickOrder(data, openPopup);
   closePopupBtnEl.addEventListener('click', closePopup);
 }

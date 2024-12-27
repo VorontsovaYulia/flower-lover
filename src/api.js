@@ -21,7 +21,6 @@ async function addQuickOrder(data, openPopup) {
     }
     openPopup(popupDescriptionSuccess);
     const data = await resp.json();
-    console.log(data);
   } catch (_) {
     openPopup(popupDescriptionError);
   }
