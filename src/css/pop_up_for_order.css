@@ -68,7 +68,7 @@
   background-color: var(--dark-text-color);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .pop-up {
     max-width: 630px;
     padding: 36px 58px;
