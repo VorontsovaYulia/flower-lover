@@ -1,6 +1,6 @@
 .reviews-container {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 32px;
 }
 
 .reviews-title {
@@ -14,9 +14,7 @@
     display: grid;
     gap: 56px;
     grid-template-columns: 1fr;
-    margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 56px;
+    margin: 80px auto 0;
 }
 
 .reviews-item {
@@ -65,7 +63,6 @@
     }
 
 
-
     .reviews-text {
         font-size: 19px;
 
@@ -73,12 +70,15 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .reviews-container {
+        padding-bottom: 160px;
+    }
+
     .reviews-list {
         gap: 24px;
         max-width: calc(4 * 306px + 3 * 24px);
         grid-template-columns: repeat(4, 1fr);
-        padding-top: 162px;
-        padding-bottom: 160px;
+        margin-top: 162px;
     }
 
     .reviews-img {
