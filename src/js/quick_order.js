@@ -40,19 +40,22 @@ function onSubmit(evt) {
     user_message,
   } = evt.currentTarget.elements;
 
+
   const data = {
     userName: user_name.value,
     userPhone: user_phone.value,
     numberOfBouquets: number_of_bouquets.value,
     cost: cost.value,
     reasonForPurchase: selectSelectedEl.textContent,
-    reasonOwnVersion: reason_own_version.value,
+    reasonOwnVersion: (selectSelectedEl.dataset.id) ? reason_own_version.value : '',
     message: user_message.value,
   };
 
   console.log(data);
   orderFormEl.reset();
   selectSelectedEl.textContent = 'Привід покупки';
+  const sameAsSelectedEl = document.querySelector('.same-as-selected');
+  sameAsSelectedEl.classList.remove('same-as-selected');
   labelOwnVersionEl.classList.add('hiddenvisualy');
   console.log('first', addQuickOrder(data));
   closePopupBtnEl.addEventListener('click', closePopup);
