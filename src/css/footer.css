@@ -139,6 +139,10 @@
     justify-content: space-evenly;
   }
 
+  .footer-info {
+    column-gap: 40px;
+  }
+
   .footer-logo {
     display: flex;
     align-items: center;
