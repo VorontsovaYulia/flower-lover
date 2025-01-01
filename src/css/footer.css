@@ -1,7 +1,7 @@
 .page-footer {
   background-color: var(--primary-color);
   padding-top: 32px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .footer-wrapper {
@@ -151,7 +151,7 @@
   }
 
   .footer-wrapper {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .footer-info {
@@ -209,18 +209,13 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .footer-wrapper {
-    justify-content: space-between;
-  }
-
+@media screen and (min-width: 1200px) {
   .footer-info {
     font-size: 19px;
     line-height: 1.15;
     grid-template-columns: 188px 133px 174px 253px;
     column-gap: 36px;
   }
-
   .footer-logo {
     font-size: 58px;
     line-height: 1.4;
